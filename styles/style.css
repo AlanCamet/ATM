@@ -38,6 +38,20 @@ body {
 
 .container{
     display: flex;
+    justify-content:start;
+}
+
+#customerCards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin: 5px;
+    border-color: black;
+    border: solid  2px;
+    border-radius: 15px;
 }
 
 
@@ -58,9 +72,9 @@ body {
     border-radius: 15px;
     padding: 10px;
     display: grid;
-    grid-template-columns: 80px 500px ;
+    grid-template-columns: 80px 250px ;
     grid-template-rows: auto auto auto;
-    margin: auto;
+    margin: 10px;
     border-color: black;
     border: solid  2px;
 }
