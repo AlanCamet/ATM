@@ -1,3 +1,33 @@
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#headerContain{
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position:static;
+    padding:10px;
+    border-radius: 20px;
+}
+
+#logo{
+    height: 45px;
+    margin: 5px;
+
+}
+h1{
+    margin:5px;
+    font-size: 50px;
+    color: white;
+    font-weight: 20000;
+}
+    
 body {
+    font-family: 'Roboto Condensed', sans-serif;
     background-color: violet;
 }
