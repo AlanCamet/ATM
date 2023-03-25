@@ -25,9 +25,57 @@ h1{
     font-size: 50px;
     color: white;
     font-weight: 20000;
+   
 }
     
 body {
     font-family: 'Roboto Condensed', sans-serif;
     background-color: violet;
+}
+
+.textALign {
+    margin: 20px;
+    
+    display: flex;
+}
+
+.data{
+    grid-column: 2;
+    grid-row-start: 1; 
+    grid-row-end: 3; 
+}
+
+.card{
+    background-color: blueviolet;
+    border-radius: 15px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-template-rows: auto auto auto;
+    margin: auto;
+    position: absolute;
+    border-color: black;
+    border: solid  2px;
+}
+
+
+
+.name, .nameCard, .acount, .acountCard, .nip, .nipCard, .bankName{
+    margin: 3px;
+    font-size: 15px;
+
+}
+.profileImg {
+    height: 80px;
+    width: 75px;
+    border-radius: 20px;
+    grid-column-start: 1;
+    grid-row-end: 2;
+}
+.bankName{
+    grid-column-start: 1;
+}
+
+#clientInfo {
+
 }
