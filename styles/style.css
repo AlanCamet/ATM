@@ -89,7 +89,7 @@ body {
 
 .name, .nameCard, .acount, .acountCard, .nip, .nipCard, .bankName{
     margin: 3px;
-    font-size: 10px;
+    font-size: 12px;
 
 }
 .profileImg {
@@ -140,8 +140,36 @@ body {
 }
 
 .buttonScreen{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: 15px;
+    border-radius: 10px;
+}
+.keyboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numberKey{
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+    border-radius: 10px;
+}
+.numbers{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+}
+.actions{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+}
+.actionKey{
+    margin: 3px;
+    width: 80px;
+    height: 40px;
     border-radius: 10px;
 }
