@@ -135,8 +135,61 @@ body {
     color: var(--primaryColor);
     font-size: 30px;
 }
+
+.formScreen{
+    top: 25px;
+
+}
+.labelInputAcount{
+    position: relative;
+    top:-42px;
+    left: 10px;
+    color: var(--primaryColor);
+    font-size: 18px;
+
+}
+.labelInput{
+    position: relative;
+    top:-42px;
+    left: 10px;
+    color: var(--primaryColor);
+    font-size: 18px;
+
+}
+.formBox{
+    position: relative;
+}
+.screenInputAcount{
+    display: block;
+    background-color: var(--quaternaryColor);
+    margin-bottom: 1rem;
+    width: 250px;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    border: 0;
+    outline: solid var(--secundaryColor);
+}
 .screenInput{
-    margin: 5px;
+    display: block;
+    background-color: var(--quaternaryColor);
+    margin-bottom: 1rem;
+    width: 250px;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    border: 0;
+    outline: solid var(--secundaryColor);
+}
+.screenInput:focus ~ .labelInput{
+    top: -60px;
+    transition: .2s;
+    background-color: var(--quaternaryColor);
+    font-size: 15px;
+}
+.screenInputAcount:focus ~ .labelInputAcount{
+    top: -60px;
+    transition: .2s;
+    background-color: var(--quaternaryColor);
+    font-size: 15px;
 }
 #rigthButtons{
     grid-column: 2; 
