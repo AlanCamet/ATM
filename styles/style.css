@@ -1,3 +1,9 @@
+:root{
+    --primaryColor: #1E1F26;
+    --secundaryColor: #283655;
+    --tertiaryColor: #4D6a8D;
+    --quaternaryColor:  #d0E1f9;
+}
 
 header{
     display: flex;
@@ -7,11 +13,10 @@ header{
 
 
 #headerContain{
-    background-color: blueviolet;
+    background-color:var(--secundaryColor);
     display: flex;
     justify-content: center;
     align-items: center;
-    
     position:static;
     padding:10px;
     border-radius: 20px;
@@ -32,7 +37,7 @@ h1{
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
-    background-color: violet;
+    background-color: var(--primaryColor) ;
 }
 
 
@@ -46,7 +51,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blueviolet;
+    background-color: var(--tertiaryColor);
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     margin: 5px;
@@ -72,7 +77,7 @@ body {
 }
 
 .card{
-    background-color: blueviolet;
+    background-color: var(--tertiaryColor);
     height: 80px;
     width: 200px;
     border-radius: 15px;
@@ -113,7 +118,7 @@ body {
 }
 #screen{
     grid-column: 1;
-    background-color: gray;
+    background-color: var(--quaternaryColor);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,7 +132,7 @@ body {
     grid-template-rows: auto auto auto;
 }
 .screenMsg{
-    color: aliceblue;
+    color: var(--primaryColor);
     font-size: 30px;
 }
 .screenInput{
