@@ -20,6 +20,7 @@ header{
     position:static;
     padding:10px;
     border-radius: 20px;
+    box-shadow: 0px 0px 5px .5px var(--quaternaryColor);
 }
 
 #logo{
@@ -55,12 +56,12 @@ body {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     margin: 5px;
-    border-color: black;
-    border: solid  2px;
+    border: 0;
     border-radius: 15px;
     height: 100px;
     border-radius: 15px;
     font-size: 13px;
+    box-shadow: 0px 0px 5px .5px var(--quaternaryColor);
 }
 
 
@@ -86,8 +87,8 @@ body {
     grid-template-columns: 45px 160px ;
     grid-template-rows: auto auto auto;
     margin: 10px;
-    border-color: black;
-    border: solid  2px;
+    border: 0;
+    box-shadow: 0px 0px 5px .5px var(--quaternaryColor);
 }
 
 
@@ -105,7 +106,7 @@ body {
     grid-row-end: 2;
 }
 .bankName{
-    color: aliceblue;
+    color: var(--quaternaryColor);
     padding-left: 5px;
     grid-column-start: 1;
     font-size: 10px;
@@ -124,8 +125,9 @@ body {
     align-items: center;
     width: 400px;
     height: 250px;
-    border: solid ;
     border-radius: 30px;
+    box-shadow: 0px 0px 5px .5px var(--quaternaryColor);
+    margin-bottom: 15px;
 }
 .contentScreen{
     display: grid;
@@ -191,6 +193,7 @@ body {
     background-color: var(--quaternaryColor);
     font-size: 15px;
 }
+
 #rigthButtons{
     grid-column: 2; 
     display: grid;
@@ -231,3 +234,19 @@ body {
     height: 40px;
     border-radius: 10px;
 }
+button{
+    background-color: var(--tertiaryColor);
+    color: var(--quaternaryColor);
+    border: 0;
+    box-shadow: 0px  0px 5px .5px var(--quaternaryColor);
+}
+button:hover{
+    background-color: var(--secundaryColor);
+    transition: .2s;
+}
+button:active{
+    background-color: var(--quaternaryColor);
+    color: var(--primaryColor);
+}
+
+
