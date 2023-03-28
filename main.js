@@ -26,6 +26,7 @@ const acountTres = document.querySelector(".acountTres")
 const nipTres = document.querySelector(".nipTres")
 const boton = document.querySelector(".botonLogin")
 
+
 //Eventos
 function textUno(string){
     nameUno.textContent = string.name;
