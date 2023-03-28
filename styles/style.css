@@ -154,7 +154,7 @@ body {
     font-size: 18px;
 
 }
-.labelInput{
+.labelInputNip{
     position: relative;
     top:-42px;
     left: 10px;
@@ -175,7 +175,7 @@ body {
     border: 0;
     outline: solid var(--secundaryColor);
 }
-.screenInput{
+.screenInputNip{
     display: block;
     background-color: var(--quaternaryColor);
     margin-bottom: 1rem;
@@ -185,7 +185,7 @@ body {
     border: 0;
     outline: solid var(--secundaryColor);
 }
-.screenInput:focus ~ .labelInput{
+.screenInputNip:focus ~ .labelInputNip{
     top: -60px;
     transition: .2s;
     background-color: var(--quaternaryColor);
