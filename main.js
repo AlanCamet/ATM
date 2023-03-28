@@ -9,7 +9,7 @@ const customers =[
     balance: 320,
     acount: 23627,
     nip: 2004},
-
+    
     {name:'Adrian Velázquez',
     balance: 292,
     acount: 32638,
@@ -43,3 +43,13 @@ function textTres(string){
     acountTres.textContent = string.acount;
     nipTres.textContent = string.nip;
 } textTres(customers[2])
+
+function login(){
+    let userAcount = document.querySelector(".screenInputAcount").value
+    let userNip = document.querySelector(".screenInputNip").value
+    if(userAcount == customers[0].acount && userNip == customers[0].nip || userAcount == customers[1].acount && userNip == customers[1].nip || userAcount == customers[2].acount && userNip == customers[2].nip){
+        window.location = "login.hmtl"
+    } else{
+        Window.location = "error.html"
+    }
+} login()
