@@ -28,6 +28,7 @@ const boton = document.querySelector(".botonLogin")
 
 
 //Eventos
+alert("Press TAB for start")
 function textUno(string){
     nameUno.textContent = string.name;
     acountUno.textContent = string.acount;
