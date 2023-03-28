@@ -1,28 +1,54 @@
 //Variables
-const screenInputAcount = document.getElementsByClassName('screenInputAcount')
-const screenInputNip = document.getElementsByClassName('screenInputNip')
-const uno = document.getElementById('uno')
-const dos = document.getElementById('dos')
-const tres = document.getElementById('tres')
-const cuatro = document.getElementById('cuatro')
-const cinco = document.getElementById('cinco')
-const seis = document.getElementById('seis')
-const siete = document.getElementById('siete')
-const ocho = document.getElementById('ocho')
-const nueve = document.getElementById('nueve')
-const cero = document.getElementById('cero')
-const tripleCero = document.getElementById('tripleCero')
-const enter = document.getElementById('enter')
-const clear = document.getElementById('clear')
-const cancel = document.getElementById('cancel')
+const customers =[
+    ['Alan camet', 250, 13572, 9704],
+    ['Melody Vargas', 320, 23627, 2004],
+    ['Adrian Velázquez', 292, 32638, 9319]
+]
+const nameUno = document.querySelector(".nameUno")
+const acountUno = document.querySelector(".acountUno")
+const nipUno = document.querySelector(".nipUno")
+const nameDos = document.querySelector(".nameDos")
+const acountDos = document.querySelector(".acountDos")
+const nipDos = document.querySelector(".nipDos")
+const nameTres = document.querySelector(".nameTres")
+const acountTres = document.querySelector(".acountTres")
+const nipTres = document.querySelector(".nipTres")
 
 //Eventos
-uno.onclick = function unoEvent() {
-    screenInputAcount.textContent = screenInputAcount.textContent + "1"
+function nombreUno(string){
+    nameUno.textContent = string
+} nombreUno(customers[0][0])
 
-}
+function cuentaUno(string){
+    acountUno.textContent = string
+} cuentaUno(customers[0][2])
 
-dos.onclick = function (e) {
-    screenInputAcount.textContent = screenInputAcount.textContent + "2"
+function passUno(string){
+    nipUno.textContent = string
+} passUno(customers[0][3])
 
-}
+function nombreDos(string){
+    nameDos.textContent = string
+} nombreDos(customers[1][0])
+
+function cuentaDos(string){
+    acountDos.textContent = string
+} cuentaDos(customers[1][2])
+
+function passDos(string){
+    nipDos.textContent = string
+} passDos(customers[1][3])
+
+function nombreTres(string){
+    nameTres.textContent = string
+} nombreTres(customers[2][0])
+
+function cuentaTres(string){
+    acountTres.textContent = string
+} cuentaTres(customers[2][2])
+
+function passTres(string){
+    nipTres.textContent = string
+} passTres(customers[2][3])
+
+

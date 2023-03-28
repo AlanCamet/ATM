@@ -39,6 +39,8 @@ h1{
 body {
     font-family: 'Roboto Condensed', sans-serif;
     background-color: var(--primaryColor) ;
+    display: grid;
+    
 }
 
 
@@ -186,12 +188,15 @@ body {
     outline: solid var(--secundaryColor);
 }
 .screenInputNip:focus ~ .labelInputNip{
+    pointer-events: none;
+    text-transform: uppercase;
     top: -60px;
     transition: .2s;
     background-color: var(--quaternaryColor);
     padding: 0px 5px;
     font-size: 15px;
 }
+
 .screenInputAcount:focus ~ .labelInputAcount{
     top: -60px;
     transition: .2s;
