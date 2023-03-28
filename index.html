@@ -64,10 +64,10 @@
                 <p class="screenMsg">Welcome to DEV.F Bank</p>
               <form class="formScreen" action="">
                 <div class="formBox">
-                    <input class="screenInputAcount" type="text" >
-                      <label class="labelInputAcount" for="">Acount</label>
-                      <input class="screenInput" type="password">
-                      <label class="labelInput" for="">NIP</label>
+                    <input class="screenInputAcount" type="textfield" name="acount" value="" autocomplete="off" readonly required>
+                    <label class="labelInputAcount" for="">Acount</label>
+                    <input class="screenInput" type="textfield" name="nip" value="" autocomplete="off" readonly required>
+                    <label class="labelInput" for="">NIP</label>
                 </div>
               </form>
             </div>
@@ -80,23 +80,23 @@
     </section>
     <section class="keyboard">
         <div class="numbers">
-            <button class="numberKey">1</button>
-            <button class="numberKey">2</button>
-            <button class="numberKey">3</button>
-            <button class="numberKey">4</button>
-            <button class="numberKey">5</button>
-            <button class="numberKey">6</button>
-            <button class="numberKey">7</button>
-            <button class="numberKey">8</button>
-            <button class="numberKey">9</button>
-            <button class="numberKey">.</button>
-            <button class="numberKey">0</button>
-            <button class="numberKey">000</button>
+            <button id="uno" class="numberKey">1</button>
+            <button id="dos" class="numberKey">2</button>
+            <button id="tres" class="numberKey">3</button>
+            <button id="cuatro" class="numberKey">4</button>
+            <button id="cinco" class="numberKey">5</button>
+            <button id="seis" class="numberKey">6</button>
+            <button id="siete" class="numberKey">7</button>
+            <button id="ocho" class="numberKey">8</button>
+            <button id="nueve" class="numberKey">9</button>
+            <button id="punto" class="numberKey">.</button>
+            <button id="cero" class="numberKey">0</button>
+            <button id="tripleCero" class="numberKey">000</button>
         </div>
         <div class="actions">
-            <button class="actionKey">Enter</button>
-            <button class="actionKey">Clear</button>
-            <button class="actionKey">Cancel</button>
+            <button id="enter" class="actionKey">Enter</button>
+            <button id="clear" class="actionKey">Clear</button>
+            <button id="cancel" class="actionKey">Cancel</button>
             <button class="actionKey">o</button>
         </div>
     </section>

@@ -90,7 +90,11 @@ body {
     border: 0;
     box-shadow: 0px 0px 5px .5px var(--quaternaryColor);
 }
-
+.card:hover{
+    transition: .5s;
+    height: 90px;
+    width: 210px;
+}
 
 
 .name, .nameCard, .acount, .acountCard, .nip, .nipCard, .bankName{
@@ -185,12 +189,14 @@ body {
     top: -60px;
     transition: .2s;
     background-color: var(--quaternaryColor);
+    padding: 0px 5px;
     font-size: 15px;
 }
 .screenInputAcount:focus ~ .labelInputAcount{
     top: -60px;
     transition: .2s;
     background-color: var(--quaternaryColor);
+    padding: 0px 5px;
     font-size: 15px;
 }
 
