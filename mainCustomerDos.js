@@ -20,6 +20,7 @@ const nameDos = document.querySelector(".nameDos")
 const acountDos = document.querySelector(".acountDos")
 const nipDos = document.querySelector(".nipDos")
 const boton = document.querySelector(".botonLogin")
+const screenMsg = document.querySelector(".screenMsg")
 
 
 //Eventos
@@ -31,5 +32,5 @@ function textDos(string){
     nipDos.textContent = string.nip;
 } textDos(customers[1])
 
-boton.onclick = login 
+screenMsg.textContent = "Hola, " + (customers[1].name)
 

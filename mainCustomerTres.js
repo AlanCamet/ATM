@@ -21,6 +21,7 @@ const nameTres = document.querySelector(".nameTres")
 const acountTres = document.querySelector(".acountTres")
 const nipTres = document.querySelector(".nipTres")
 const boton = document.querySelector(".botonLogin")
+const screenMsg = document.querySelector(".screenMsg")
 
 
 //Eventos
@@ -33,5 +34,5 @@ function textTres(string){
     nipTres.textContent = string.nip;
 } textTres(customers[2])
 
-boton.onclick = login 
+screenMsg.textContent = "Hola, " + (customers[2].name)
 
