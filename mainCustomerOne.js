@@ -28,6 +28,7 @@ const boton = document.querySelector(".botonLogin")
 
 
 //Eventos
+title.textContent= customers[0].name
 function textUno(string){
     nameUno.textContent = string.name;
     acountUno.textContent = string.acount;
@@ -56,9 +57,9 @@ function login(){
     if(userAcount == customers[0].acount && userNip == customers[0].nip){
         window.location.href = "customerOne.html"
 } else if(userAcount == customers[1].acount && userNip == customers[1].nip){
-    window.location.href = "customerDos.html"
+    window.location.href = "customerOne.html"
 } else if(userAcount == customers[2].acount && userNip == customers[2].nip){
-    window.location.href = "customerTres.html"
+    window.location.href = "customerOne.html"
 }else {
     window.location.href = "error.html"
 } 

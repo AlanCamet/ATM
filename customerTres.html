@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title"></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/style.css">
+<script type="module" src="mainCustomerTres.js"></script>
+</head>
+<body>
+    <header>
+        <div id="headerContain">
+        <img id="logo" src="https://campus.devf.la/static/media/logo-devf-white.0e9942b3.svg" alt="devfLogo">
+        <h1>BANK</h1>
+    </div>
+    </header> 
+    <section class="container">
+        <div id="customerCards"> <p>Customer Cards</p></div>
+        <div class="card">
+            <img class="profileImg" src="assets/profile.png" alt="profile">
+            <p class="bankName">DEV.f Bank</p>
+            <div class="data">
+                <div class="textALign">
+                    <p class="nameCard">Name: </p>
+                    <p class="name nameTres"></p>
+                </div>
+                <div class="textALign">
+                    <p class="acountCard">Acount: </p>
+                    <p class="acount acountTres"></p>
+                </div>
+                <div class="textALign">
+                    <p class="nipCard">NIP: </p>
+                    <p class="nip nipTres"></p>
+                </div>
+            </div>
+        </div>
+    </section>   
+    <section class="screenSpace">
+        <div id="screen">
+            <div class="contentScreen">
+                <p class="screenMsg">Welcome to DEV.F Bank</p>
+              <form class="formScreen" action="">
+                <div class="formBox">
+                    <input class="screenInputAcount">
+                    <label class="labelInputAcount" for="">Acount</label>
+                    <input class="screenInputNip">
+                    <label class="labelInputNip" for="">NIP</label>
+                </div>
+              </form>
+            </div>
+        </div>
+        <div id="rigthButtons">
+            <button class="buttonScreen">o</button>
+            <button class="buttonScreen">o</button>
+            <button class="buttonScreen">o</button>
+        </div>
+    </section>
+    <section class="keyboard">
+        <div class="numbers">
+            <button id="uno" class="numberKey">1</button>
+            <button id="dos" class="numberKey">2</button>
+            <button id="tres" class="numberKey">3</button>
+            <button id="cuatro" class="numberKey">4</button>
+            <button id="cinco" class="numberKey">5</button>
+            <button id="seis" class="numberKey">6</button>
+            <button id="siete" class="numberKey">7</button>
+            <button id="ocho" class="numberKey">8</button>
+            <button id="nueve" class="numberKey">9</button>
+            <button id="punto" class="numberKey">.</button>
+            <button id="cero" class="numberKey">0</button>
+            <button id="tripleCero" class="numberKey">000</button>
+        </div>
+        <div class="actions">
+            <button id="enter" class="actionKey botonLogin">Enter</button>
+            <button id="clear" class="actionKey">Clear</button>
+            <button id="cancel" class="actionKey">Cancel</button>
+            <button class="actionKey">o</button>
+        </div>
+    </section>
+
+</body>
+</html>
