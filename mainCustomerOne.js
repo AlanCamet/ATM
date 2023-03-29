@@ -23,6 +23,7 @@ const nipUno = document.querySelector(".nipUno")
 
 const screenMsg = document.querySelector(".screenMsg")
 const screen = document.querySelector("#screen")
+const screenUno = document.querySelector(".screenUno")
 const pregunta = document.querySelector(".pregunta")
 const saldo = document.querySelector(".saldo")
 const ingresar = document.querySelector(".ingresar")
@@ -60,10 +61,11 @@ buttonExit.onclick = exitEvent
 
 function saldoEvent() {                                     //PANTALLA PARA VER EL SALDO
         screenMsg.textContent = "Your account balance is:"
-        pregunta.textContent = "$" + client.balance + " USD"
+        pregunta.textContent = "$" + client.balance + " USD"  
         saldo.textContent = ""
         ingresar.textContent = ""
-        retirar.textContent = "Press CANCEL to exit"
+        retirar.textContent = ""
+        screenUno.innerHTML ='<p class="cancelMsg">Press CANCEL to return</p>'
 } 
 buttonTop.onclick = saldoEvent
 

@@ -42,6 +42,8 @@ const display = [
 ]
 const boton = document.querySelector(".botonLogin")
 const buttonExit = document.querySelector(".buttonExit")
+const screenInputAcount = document.querySelector(".screenInputAcount")
+const uno =document.querySelector(".uno")
 
 
 //Eventos
@@ -75,3 +77,8 @@ function login(){
     } 
 }
 boton.onclick = login 
+
+function unoEvent(){
+    screenInputAcount.textContent = screenInputAcount.textContent + "1"
+}
+uno.onclick = unoEvent

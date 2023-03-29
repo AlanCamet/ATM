@@ -21,13 +21,11 @@ const nameUno = document.querySelector(".nameUno")
 const acountUno = document.querySelector(".acountUno")
 const nipUno = document.querySelector(".nipUno")
 
-const screenMsg = document.querySelector(".screenMsg")
 const screenUno = document.querySelector(".screenUno")
 const screen = document.querySelector("#screen")
 const pregunta = document.querySelector(".pregunta")
-const saldo = document.querySelector(".saldo")
-const ingresar = document.querySelector(".ingresar")
-const retirar = document.querySelector(".retirar")
+const newBalance = document.querySelector(".newBalance")
+const cancelMsg = document.querySelector(".cancelMsg")
 
 const buttonTop = document.querySelector(".buttonTop")
 const buttonMiddle = document.querySelector(".buttonMiddle")
@@ -65,14 +63,11 @@ function retirarEvent(){
         resultado = parseFloat(client.balance) - parseFloat(inputValue)
         if(resultado > 9){
             client.balance = resultado
-            screenMsg.textContent = "Your new balance is:"
-             pregunta.textContent = "$" + client.balance + " USD"
-            saldo.textContent = ""
-            ingresar.textContent = ""
-            retirar.textContent = "Press CANCEL to return"
+            newBalance.textContent = "Your new balance is:" 
+            pregunta.textContent = "$" + client.balance + " USD"
             console.log(resultado)
         } else{
-            alert("El monto minimi posible es de $10. Evita exeder este limite.")
+            alert("El monto minimo posible es de $10. Evita exeder este limite.")
         }
     }
 }
