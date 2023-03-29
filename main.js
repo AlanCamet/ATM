@@ -69,7 +69,7 @@ function login(){
     if(userAcount == customers[0].acount && userNip == customers[0].nip){
         window.location.href = "customerOne.html"
     } else if(userAcount == customers[1].acount && userNip == customers[1].nip){
-        window.location.href = "clienteDos/customerDos.html"
+        window.location.href = "customerDos.html"
     } else if(userAcount == customers[2].acount && userNip == customers[2].nip){
         window.location.href = "customerTres.html"
     }else {
@@ -77,8 +77,3 @@ function login(){
     } 
 }
 boton.onclick = login 
-
-function unoEvent(){
-    screenInputAcount.textContent = screenInputAcount.textContent + "1"
-}
-uno.onclick = unoEvent

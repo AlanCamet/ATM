@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title"></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styleUnoRetiro.css">
+<script type="module" src="mainCustomerDosRetirar.js"></script>
+</head>
+<body>
+    <header>
+        <div id="headerContain">
+        <img id="logo" src="https://campus.devf.la/static/media/logo-devf-white.0e9942b3.svg" alt="devfLogo">
+        <h1>BANK</h1>
+    </div>
+    </header> 
+    <section class="container">
+        <div id="customerCards"> <p>Customer Cards</p></div>
+        <div class="card">
+            <img class="profileImg" src="assets/profile.png" alt="profile">
+            <p class="bankName">DEV.f Bank</p>
+            <div class="data">
+                <div class="textALign">
+                    <p class="nameCard">Name: </p>
+                    <p class="name nameDos"></p>
+                </div>
+                <div class="textALign">
+                    <p class="acountCard">Acount: </p>
+                    <p class="acount acountDos"></p>
+                </div>
+                <div class="textALign">
+                    <p class="nipCard">NIP: </p>
+                    <p class="nip nipDos"></p>
+                </div>
+            </div>
+        </div>
+        
+    </section>   
+    <section class="screenSpace">
+        <div id="screen">
+            <div class="contentScreen screenUno">
+                <p class="newBalance"></p>
+                <p class="pregunta">¿Cuanto quieres retirar?</p>
+                <input type="text" class="inputValue">
+                <p class="cancelMsg">Press CANCEL to return</p>
+            </div>
+        </div>
+        <div id="rigthButtons">
+            <button class="buttonScreen buttonTop">o</button>
+            <button class="buttonScreen buttonMiddle">o</button>
+            <button class="buttonScreen buttonBottom">o</button>
+        </div>
+    </section>
+    <section class="keyboard">
+        <div class="actions">
+            <button id="enter" class="actionKey botonLogin">Enter</button>
+            <button id="cancel" class="actionKey buttonCancel">Cancel</button>
+            <button class="actionKey buttonExit">Exit</button>
+        </div>
+    </section>
+ 
+</body>
+</html>
