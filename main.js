@@ -1,4 +1,13 @@
 //Variables
+const nameUno = document.querySelector(".nameUno")
+const acountUno = document.querySelector(".acountUno")
+const nipUno = document.querySelector(".nipUno")
+const nameDos = document.querySelector(".nameDos")
+const acountDos = document.querySelector(".acountDos")
+const nipDos = document.querySelector(".nipDos")
+const nameTres = document.querySelector(".nameTres")
+const acountTres = document.querySelector(".acountTres")
+const nipTres = document.querySelector(".nipTres")
 const customers =[
     {name: 'Alan camet',
     balance: 250,
@@ -15,36 +24,35 @@ const customers =[
     acount: 32638,
     nip: 9319}
 ]
-const nameUno = document.querySelector(".nameUno")
-const acountUno = document.querySelector(".acountUno")
-const nipUno = document.querySelector(".nipUno")
-const nameDos = document.querySelector(".nameDos")
-const acountDos = document.querySelector(".acountDos")
-const nipDos = document.querySelector(".nipDos")
-const nameTres = document.querySelector(".nameTres")
-const acountTres = document.querySelector(".acountTres")
-const nipTres = document.querySelector(".nipTres")
+const display = [
+    {name: nameUno,
+    acount: acountUno,
+    nip: nipUno
+    },
+
+    {name: nameDos,
+    acount: acountDos,
+    nip: nipDos
+    },
+
+    {name: nameTres,
+    acount: acountTres,
+    nip: nipTres
+    }
+]
 const boton = document.querySelector(".botonLogin")
 
 
 //Eventos
-function textUno(string){
-    nameUno.textContent = string.name;
-    acountUno.textContent = string.acount;
-    nipUno.textContent = string.nip;
-} textUno(customers[0])
+function textUno(string,display){
+    display.name.textContent = string.name;
+    display.acount.textContent = string.acount;
+    display.nip.textContent = string.nip;
+} 
+textUno(customers[0],display[0])
+textUno(customers[1], display[1])
+textUno(customers[2], display[2])
 
-function textDos(string){
-    nameDos.textContent = string.name;
-    acountDos.textContent = string.acount;
-    nipDos.textContent = string.nip;
-} textDos(customers[1])
-
-function textTres(string){
-    nameTres.textContent = string.name;
-    acountTres.textContent = string.acount;
-    nipTres.textContent = string.nip;
-} textTres(customers[2])
 
 boton.onclick = login 
 
