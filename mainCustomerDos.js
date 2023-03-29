@@ -10,7 +10,7 @@ const customers =[
     acount: 23627,
     nip: 2004},
     
-    {name:'Adrian Velázquez',
+    {name:'Adrian Camet',
     balance: 292,
     acount: 32638,
     nip: 9319}
