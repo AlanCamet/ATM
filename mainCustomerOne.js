@@ -33,26 +33,10 @@ const buttonMiddle = document.querySelector(".buttonMiddle")
 const buttonBottom = document.querySelector(".buttonBottom")
 const buttonEnter = document.querySelector(".botonLogin")
 const buttonCancel = document.querySelector(".buttonCancel")
-
-let controlState = false
-let resultado
-let enterMoney
-/* let enter = enterMoney */
-/* let enterMoney = document.querySelector(".enterMoney").value */
-
+const buttonExit = document.querySelector(".buttonExit")
 
 //Eventos
- function cancelEvent(){                                        //EL BOTON CANCELAR FUNCIONA DESDE DONDE ESTES PARADO
-        screenMsg.textContent = "Hola, " + (client.name)
-        pregunta.textContent = "¿Que operación quieres realizar?"
-        saldo.textContent = "Consultar saldo"
-        ingresar.textContent = "Ingresar monto"
-        retirar.textContent = "Retirar monto"
-        controlState = false
- }
-buttonCancel.onclick = cancelEvent
-
-title.textContent= client.name                       //CAMBIO TITULO
+title.textContent= client.name                       //CAMBIO TITULO EN EL NAVEGADOR
 
 function textUno(string){                           //CONTENIDO DE TARJETA
     nameUno.textContent = string.name;
@@ -62,46 +46,29 @@ function textUno(string){                           //CONTENIDO DE TARJETA
 
 screenMsg.textContent = "Hola, " + (client.name)      //SALUDO PERSONALIZADO EN PANTALLA
 
-
-
-function ingresarEvent (){                       //PANTALLA PARA INGRESAR UN MONTO
-    if(!controlState){  
-        screenMsg.textContent = "How much do you want to enter?"
-        pregunta.innerHTML ='<input type="text" class="enterMoney">'
-        enterMoney = document.querySelector(".enterMoney").value
-        saldo.textContent = ""
-        ingresar.textContent = "Go back"
-        retirar.textContent = "Press Enter"
-        controlState = true 
-    }else{
-        screenMsg.textContent = "Hola, " + (client.name)
-        pregunta.textContent = "¿Que operación quieres realizar?"
-        saldo.textContent = "Consultar saldo"
-        ingresar.textContent = "Ingresar monto"
-        retirar.textContent = "Retirar monto"
-        controlState = false
-    }
+function cancelEvent(){                                        //EL BOTON CANCELAR FUNCIONA DESDE DONDE ESTES PARADO
+       screenMsg.textContent = "Hola, " + (client.name)
+       pregunta.textContent = "¿Que operación quieres realizar?"
+       saldo.textContent = "Consultar saldo"
+       ingresar.textContent = "Ingresar monto"
+       retirar.textContent = "Retirar monto"
+       controlState = false
 }
+buttonCancel.onclick = cancelEvent
 
-buttonMiddle.onclick = ingresarEvent
+function exitEvent(){
+    window.location = "index.html"
+}
+buttonExit.onclick = exitEvent
 
 function saldoEvent() {                                     //PANTALLA PARA VER EL SALDO
-    if(!controlState){
         screenMsg.textContent = "Your account balance is:"
         pregunta.textContent = "$" + client.balance + " USD"
-        saldo.textContent = "Go back"
+        saldo.textContent = ""
         ingresar.textContent = ""
-        retirar.textContent = ""
+        retirar.textContent = "Press CANCEL to exit"
         controlState = true
-    }else{
-        screenMsg.textContent = "Hola, " + (client.name)
-        pregunta.textContent = "¿Que operación quieres realizar?"
-        saldo.textContent = "Consultar saldo"
-        ingresar.textContent = "Ingresar monto"
-        retirar.textContent = "Retirar monto"
-        controlState = false
-    }
-}
+} 
 buttonTop.onclick = saldoEvent
 
 

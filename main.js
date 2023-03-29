@@ -41,9 +41,15 @@ const display = [
     }
 ]
 const boton = document.querySelector(".botonLogin")
+const buttonExit = document.querySelector(".buttonExit")
 
 
 //Eventos
+function exitEvent(){
+    window.location = "index.html"
+}
+buttonExit.onclick = exitEvent
+
 function textUno(string,display){
     display.name.textContent = string.name;
     display.acount.textContent = string.acount;
@@ -53,21 +59,19 @@ textUno(customers[0], display[0])
 textUno(customers[1], display[1])
 textUno(customers[2], display[2])
 
-
-boton.onclick = login 
-
 function login(){
-
+    
     let userAcount = document.querySelector(".screenInputAcount").value
     let userNip = document.querySelector(".screenInputNip").value
     
     if(userAcount == customers[0].acount && userNip == customers[0].nip){
         window.location.href = "customerOne.html"
-} else if(userAcount == customers[1].acount && userNip == customers[1].nip){
-    window.location.href = "customerDos.html"
-} else if(userAcount == customers[2].acount && userNip == customers[2].nip){
-    window.location.href = "customerTres.html"
-}else {
-    window.location.href = "error.html"
-} 
+    } else if(userAcount == customers[1].acount && userNip == customers[1].nip){
+        window.location.href = "customerDos.html"
+    } else if(userAcount == customers[2].acount && userNip == customers[2].nip){
+        window.location.href = "customerTres.html"
+    }else {
+        window.location.href = "error.html"
+    } 
 }
+boton.onclick = login 
