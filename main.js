@@ -63,5 +63,3 @@ function login(){
     window.location.href = "error.html"
 } 
 }
-
-function
