@@ -1,4 +1,13 @@
 //Variables
+const nameUno = document.querySelector(".nameUno")
+const acountUno = document.querySelector(".acountUno")
+const nipUno = document.querySelector(".nipUno")
+const nameDos = document.querySelector(".nameDos")
+const acountDos = document.querySelector(".acountDos")
+const nipDos = document.querySelector(".nipDos")
+const nameTres = document.querySelector(".nameTres")
+const acountTres = document.querySelector(".acountTres")
+const nipTres = document.querySelector(".nipTres")
 const customers =[
     {name: 'Alan camet',
     balance: 250,
@@ -15,11 +24,25 @@ const customers =[
     acount: 32638,
     nip: 9319}
 ]
+const display = [
+    {name: nameUno,
+    acount: acountUno,
+    nip: nipUno
+    },
+
+    {name: nameDos,
+    acount: acountDos,
+    nip: nipDos
+    },
+
+    {name: nameTres,
+    acount: acountTres,
+    nip: nipTres
+    }
+]
 const client = customers[0]
+const card = display [0]
 const title = document.querySelector("#title")
-const nameUno = document.querySelector(".nameUno")
-const acountUno = document.querySelector(".acountUno")
-const nipUno = document.querySelector(".nipUno")
 
 const screenMsg = document.querySelector(".screenMsg")
 const screen = document.querySelector("#screen")
@@ -41,11 +64,12 @@ let resultado
 //Eventos
 title.textContent= client.name                       //CAMBIO TITULO EN EL NAVEGADOR
 
-function textUno(string){                           //CONTENIDO DE TARJETA
-    nameUno.textContent = string.name;
-    acountUno.textContent = string.acount;
-    nipUno.textContent = string.nip;
-} textUno(client)
+function textUno(string,display){
+    display.name.textContent = string.name;
+    display.acount.textContent = string.acount;
+    display.nip.textContent = string.nip;
+} 
+textUno(client,card)
 
 screenMsg.textContent = "Hola, " + (client.name)      //SALUDO PERSONALIZADO EN PANTALLA
 
