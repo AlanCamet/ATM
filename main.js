@@ -49,7 +49,7 @@ function textUno(string,display){
     display.acount.textContent = string.acount;
     display.nip.textContent = string.nip;
 } 
-textUno(customers[0],display[0])
+textUno(customers[0], display[0])
 textUno(customers[1], display[1])
 textUno(customers[2], display[2])
 

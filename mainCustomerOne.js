@@ -32,32 +32,40 @@ const buttonTop = document.querySelector(".buttonTop")
 const buttonMiddle = document.querySelector(".buttonMiddle")
 const buttonBottom = document.querySelector(".buttonBottom")
 const buttonEnter = document.querySelector(".botonLogin")
-let controlState = false
 
+let controlState = false
+let resultado
+/* let enter = enterMoney */
+/* let enterMoney = document.querySelector(".enterMoney").value */
 
 
 //Eventos
-title.textContent= client.name
-function textUno(string){
+/* function suma(string){
+    resultado = string.balance + enterMoney
+    string.balance = resultado
+} suma(client)
+console.log(client.balance) */
+
+title.textContent= client.name                       //CAMBIO TITULO
+
+function textUno(string){                           //CONTENIDO DE TARJETA
     nameUno.textContent = string.name;
     acountUno.textContent = string.acount;
     nipUno.textContent = string.nip;
 } textUno(client)
 
-screenMsg.textContent = "Hola, " + (client.name)
+screenMsg.textContent = "Hola, " + (client.name)      //SALUDO PERSONALIZADO EN PANTALLA
 
-function suma(string){
-    string.balance = string.balance + enterMoney
-   
-} 
 
-function ingresarEvent (){
-    if(!controlState){
+
+function ingresarEvent (){ 
+    let enterMoney                             //PANTALLA PARA INGRESAR UN MONTO
+    if(!controlState){  
         screenMsg.textContent = "How much do you want to enter?"
         pregunta.innerHTML ='<input type="text" class="enterMoney">'
-        let enterMoney = document.querySelector(".enterMoney").value
+        enterMoney = document.querySelector(".enterMoney").value
         saldo.textContent = ""
-        ingresar.textContent = "Enter"
+        ingresar.textContent = "Go back"
         retirar.textContent = "Press Enter"
         controlState = true 
     }else{
@@ -68,14 +76,17 @@ function ingresarEvent (){
         retirar.textContent = "Retirar monto"
         controlState = false
     }
+    
     function suma(string){
-        string.balance = string.balance + enterMoney 
-    } 
-    buttonMiddle.onclick = suma(client)
+        resultado = string.balance + enterMoney
+        string.balance = resultado
+    } suma(client)
+    buttonEnter.onclick = suma
+    console.log(client.balance)
 }
 buttonMiddle.onclick = ingresarEvent
 
-function saldoEvent() {
+function saldoEvent() {                                     //PANTALLA PARA VER EL SALDO
     if(!controlState){
         screenMsg.textContent = "Your account balance is:"
         pregunta.textContent = "$" + client.balance + " USD"
