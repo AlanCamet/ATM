@@ -15,7 +15,7 @@ const customers =[
     acount: 32638,
     nip: 9319}
 ]
-let client = customers[0]
+const client = customers[0]
 const title = document.querySelector("#title")
 const nameUno = document.querySelector(".nameUno")
 const acountUno = document.querySelector(".acountUno")
@@ -32,19 +32,25 @@ const buttonTop = document.querySelector(".buttonTop")
 const buttonMiddle = document.querySelector(".buttonMiddle")
 const buttonBottom = document.querySelector(".buttonBottom")
 const buttonEnter = document.querySelector(".botonLogin")
+const buttonCancel = document.querySelector(".buttonCancel")
 
 let controlState = false
 let resultado
+let enterMoney
 /* let enter = enterMoney */
 /* let enterMoney = document.querySelector(".enterMoney").value */
 
 
 //Eventos
-/* function suma(string){
-    resultado = string.balance + enterMoney
-    string.balance = resultado
-} suma(client)
-console.log(client.balance) */
+ function cancelEvent(){                                        //EL BOTON CANCELAR FUNCIONA DESDE DONDE ESTES PARADO
+        screenMsg.textContent = "Hola, " + (client.name)
+        pregunta.textContent = "¿Que operación quieres realizar?"
+        saldo.textContent = "Consultar saldo"
+        ingresar.textContent = "Ingresar monto"
+        retirar.textContent = "Retirar monto"
+        controlState = false
+ }
+buttonCancel.onclick = cancelEvent
 
 title.textContent= client.name                       //CAMBIO TITULO
 
@@ -58,8 +64,7 @@ screenMsg.textContent = "Hola, " + (client.name)      //SALUDO PERSONALIZADO EN 
 
 
 
-function ingresarEvent (){ 
-    let enterMoney                             //PANTALLA PARA INGRESAR UN MONTO
+function ingresarEvent (){                       //PANTALLA PARA INGRESAR UN MONTO
     if(!controlState){  
         screenMsg.textContent = "How much do you want to enter?"
         pregunta.innerHTML ='<input type="text" class="enterMoney">'
@@ -76,14 +81,8 @@ function ingresarEvent (){
         retirar.textContent = "Retirar monto"
         controlState = false
     }
-    
-    function suma(string){
-        resultado = string.balance + enterMoney
-        string.balance = resultado
-    } suma(client)
-    buttonEnter.onclick = suma
-    console.log(client.balance)
 }
+
 buttonMiddle.onclick = ingresarEvent
 
 function saldoEvent() {                                     //PANTALLA PARA VER EL SALDO
