@@ -56,15 +56,15 @@ function exitEvent(){
 }
 buttonExit.onclick = exitEvent
 
-function input(){
+function ingresarEvent(){
     let inputValue = document.querySelector(".inputValue").value
     let resultado 
     if (inputValue == ""){
         alert("Debes ingresar un numero valido")
     }else{
         resultado = parseFloat(client.balance) + parseFloat(inputValue)
-        client.balance = resultado
-        if(resultado < 990){
+        if(resultado < 991){
+            client.balance = resultado
             screenMsg.textContent = "Your account balance is:"
              pregunta.textContent = "$" + client.balance + " USD"
             saldo.textContent = ""
@@ -77,6 +77,6 @@ function input(){
     }
     
 }
-buttonEnter.onclick = input
+buttonEnter.onclick = ingresarEvent
 
 

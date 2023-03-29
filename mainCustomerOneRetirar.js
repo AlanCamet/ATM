@@ -22,6 +22,7 @@ const acountUno = document.querySelector(".acountUno")
 const nipUno = document.querySelector(".nipUno")
 
 const screenMsg = document.querySelector(".screenMsg")
+const screenUno = document.querySelector(".screenUno")
 const screen = document.querySelector("#screen")
 const pregunta = document.querySelector(".pregunta")
 const saldo = document.querySelector(".saldo")
@@ -35,7 +36,6 @@ const buttonEnter = document.querySelector(".botonLogin")
 const buttonCancel = document.querySelector(".buttonCancel")
 const buttonExit = document.querySelector(".buttonExit")
 
-let resultado
 
 //Eventos
 title.textContent= client.name                       //CAMBIO TITULO EN EL NAVEGADOR
@@ -46,10 +46,8 @@ function textUno(string){                           //CONTENIDO DE TARJETA
     nipUno.textContent = string.nip;
 } textUno(client)
 
-screenMsg.textContent = "Hola, " + (client.name)      //SALUDO PERSONALIZADO EN PANTALLA
-
 function cancelEvent(){                                        //EL BOTON CANCELAR FUNCIONA DESDE DONDE ESTES PARADO
-       window.location = "customerOne.html"
+    window.location = "customerOne.html"
 }
 buttonCancel.onclick = cancelEvent
 
@@ -58,23 +56,27 @@ function exitEvent(){
 }
 buttonExit.onclick = exitEvent
 
-function saldoEvent() {                                     //PANTALLA PARA VER EL SALDO
-        screenMsg.textContent = "Your account balance is:"
-        pregunta.textContent = "$" + client.balance + " USD"
-        saldo.textContent = ""
-        ingresar.textContent = ""
-        retirar.textContent = "Press CANCEL to exit"
-} 
-buttonTop.onclick = saldoEvent
-
-function ingresarEvent(){
-    window.location = "customerOneIngresar.html"
-}
-buttonMiddle.onclick = ingresarEvent
-
 function retirarEvent(){
-    window.location = "customerOneRetirar.html"
+    let inputValue = document.querySelector(".inputValue").value
+    let resultado 
+    if (inputValue == ""){
+        alert("Debes ingresar un numero valido")
+    }else{
+        resultado = parseFloat(client.balance) - parseFloat(inputValue)
+        if(resultado > 9){
+            client.balance = resultado
+            screenMsg.textContent = "Your new balance is:"
+             pregunta.textContent = "$" + client.balance + " USD"
+            saldo.textContent = ""
+            ingresar.textContent = ""
+            retirar.textContent = "Press CANCEL to return"
+            console.log(resultado)
+        } else{
+            alert("El monto minimi posible es de $10. Evita exeder este limite.")
+        }
+    }
+    
 }
-buttonBottom.onclick = retirarEvent
+buttonEnter.onclick = retirarEvent
 
 
