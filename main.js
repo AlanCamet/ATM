@@ -71,7 +71,7 @@ function login(){
     } else if(userAcount == customers[2].acount && userNip == customers[2].nip){
         window.location.href = "customerTres.html"
     }else {
-        window.location.href = "error.html"
+        alert("Acount or NIP is not valid.")
     } 
 }
 boton.onclick = login 

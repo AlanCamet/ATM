@@ -75,7 +75,6 @@ function retirarEvent(){
             alert("El monto minimi posible es de $10. Evita exeder este limite.")
         }
     }
-    
 }
 buttonEnter.onclick = retirarEvent
 
