@@ -263,7 +263,7 @@ button:active{
 
 .screenMsg{
     color: var(--primaryColor);
-    padding-top: 30px;
+    padding-top: 60px;
     padding-left: 10px;
     grid-column-start: 1;
     padding-right: 10px;
@@ -279,9 +279,10 @@ button:active{
     grid-row-end: 3;
 }
 .saldo{
+    height: 10px;
     margin-left: 40px;
-    margin-top: 0;
-    padding-top: 30px; 
+    margin-top: 40px;
+    padding-top: 40px; 
     grid-column: 2;
     grid-row: 1;
 }
@@ -291,8 +292,9 @@ button:active{
 }
 
 .ingresar{
+    height: 10px;
     margin-left: 40px;
-    padding-top: 25px;
+    padding-top: 2px;
     grid-column: 2;
     grid-row: 2;
 }
@@ -307,6 +309,7 @@ button:active{
 .retirar{
     margin-left: 50px;
     padding-top: 20px;
+    padding-bottom: 60px;
     grid-column: 2;
     grid-row: 3;
 }

@@ -71,7 +71,7 @@ function textUno(string,display){
 } 
 textUno(client,card)
 
-screenMsg.textContent = "Hola, " + (client.name)      //SALUDO PERSONALIZADO EN PANTALLA
+screenMsg.textContent = "Hi, " + (client.name)      //SALUDO PERSONALIZADO EN PANTALLA
 
 function cancelEvent(){                                        //EL BOTON CANCELAR FUNCIONA DESDE DONDE ESTES PARADO
        window.location = "customerOne.html"
