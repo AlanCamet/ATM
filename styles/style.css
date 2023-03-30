@@ -143,6 +143,8 @@ body {
 .screenMsg{
     color: var(--primaryColor);
     font-size: 30px;
+    padding-bottom: 30px;
+    margin-left: 0;
 }
 
 .formScreen{
@@ -155,6 +157,11 @@ body {
     left: 10px;
     color: var(--primaryColor);
     font-size: 18px;
+    top: -60px;
+    transition: .2s;
+    background-color: var(--quaternaryColor);
+    padding: 0px 5px;
+    font-size: 15px;
 
 }
 .labelInputNip{
@@ -163,8 +170,16 @@ body {
     left: 10px;
     color: var(--primaryColor);
     font-size: 18px;
+    pointer-events: none;
+    text-transform: uppercase;
+    top: -60px;
+    transition: .2s;
+    background-color: var(--quaternaryColor);
+    padding: 0px 5px;
+    font-size: 15px;
+} 
 
-}
+
 .formBox{
     position: relative;
 }
@@ -172,6 +187,7 @@ body {
     display: block;
     background-color: var(--quaternaryColor);
     margin-bottom: 1rem;
+    margin-left: 1rem;
     width: 250px;
     padding: .5rem 1rem;
     border-radius: 5px;
@@ -182,28 +198,12 @@ body {
     display: block;
     background-color: var(--quaternaryColor);
     margin-bottom: 1rem;
+    margin-left: 1rem;
     width: 250px;
     padding: .5rem 1rem;
     border-radius: 5px;
     border: 0;
     outline: solid var(--secundaryColor);
-}
-.screenInputNip:focus ~ .labelInputNip{
-    pointer-events: none;
-    text-transform: uppercase;
-    top: -60px;
-    transition: .2s;
-    background-color: var(--quaternaryColor);
-    padding: 0px 5px;
-    font-size: 15px;
-}
-
-.screenInputAcount:focus ~ .labelInputAcount{
-    top: -60px;
-    transition: .2s;
-    background-color: var(--quaternaryColor);
-    padding: 0px 5px;
-    font-size: 15px;
 }
 
 #rigthButtons{
