@@ -1,0 +1,16 @@
+[
+    {"name": "Alan camet",
+    "balance": 250,
+    "acount": 13572,
+    "nip": 9704},
+
+    {"name":"Melody Vargas",
+    "balance": 320,
+    "acount": 23627,
+    "nip": 2004},
+    
+    {"name":"Adrian Camet",
+    "balance": 292,
+    "acount": 32638,
+    "nip": 9319}
+]

@@ -8,6 +8,7 @@ const nipDos = document.querySelector(".nipDos")
 const nameTres = document.querySelector(".nameTres")
 const acountTres = document.querySelector(".acountTres")
 const nipTres = document.querySelector(".nipTres")
+
 const customers =[
     {name: 'Alan camet',
     balance: 250,
