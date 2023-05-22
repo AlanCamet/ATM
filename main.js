@@ -1,5 +1,6 @@
 const cardsContainer = document.querySelector("#cardsContainer")
 let data =[];
+let usuario;
 
 //consumo de JSON
 async function getJSON(customer){
@@ -62,7 +63,6 @@ const buttonMiddle = document.querySelector(".buttonMiddle")
 const buttonBottom = document.querySelector(".buttonBottom")
 const inpuAcount = document.querySelector(".screenInputAcount")
 const inputNip = document.querySelector(".screenInputNip")
-let usuario;
 
 function clean(doc){
     doc.innerHTML = ''
@@ -116,6 +116,7 @@ function inicio(){
     cancel.addEventListener("click",cancelEvent,true)
     buttonTop.addEventListener("click",checkBalance,true)
     buttonMiddle.addEventListener("click",enterScreen,true)
+    buttonBottom.addEventListener("click", withdrawScreen, true)
 
     exit.addEventListener("click", ()=>{
         console.log("hi")
@@ -129,6 +130,7 @@ function cancelEvent(event){
     inicio()
     enter.removeEventListener("click",login, true)
     enter.removeEventListener("click", addMoney, true)
+    enter.removeEventListener("click", withdraw, true)
 }
 
 function checkBalance(){
@@ -150,6 +152,7 @@ function checkBalance(){
     screen.appendChild(div)
     enter.removeEventListener("click", addMoney, true)
     buttonMiddle.removeEventListener("click",enterScreen,true)
+    buttonBottom.removeEventListener("click", withdrawScreen, true)
 }
 
 
@@ -172,15 +175,45 @@ function enterScreen (){
 
     enter.addEventListener("click", addMoney,true)
     buttonTop.removeEventListener("click",checkBalance,true)
+    buttonBottom.removeEventListener("click", withdrawScreen, true)
 }
 
-
-
-function addMoney(event){
+function addMoney(){
+    console.log("AddMoney")
     let inputAdd = parseInt(document.querySelector(".inputAdd").value)
-    event.preventDefault()
     let balanceActual = data[usuario].balance 
     data[usuario].balance = balanceActual + inputAdd
     checkBalance()
     setTimeout(enterScreen,3000)
+}
+
+function withdrawScreen(){
+    clean(screen)
+    let h2 = document.createElement("h2")
+    h2.textContent = "How much do you want to withdraw?"
+    let input = document.createElement("input")
+    input.classList.add("inputWithdraw")
+    let aviso = document.createElement("p")
+    aviso.textContent = "Press CANCEL to return"
+    let div = document.createElement("div")
+    div.classList.add("withdraw")
+
+    div.appendChild(h2)
+    div.appendChild(input)
+    div.appendChild(aviso)
+
+    screen.appendChild(div)
+
+    enter.addEventListener("click", withdraw,true)
+    buttonTop.removeEventListener("click",checkBalance,true)
+    buttonMiddle.removeEventListener("click",enterScreen,true)
+}
+
+function withdraw(){
+    console.log("withdraw money")
+    let inputWithdraw = parseInt(document.querySelector(".inputWithdraw").value)
+    let balanceActual = data[usuario].balance 
+    data[usuario].balance = balanceActual - inputWithdraw
+    checkBalance()
+    setTimeout(withdrawScreen,3000)
 }
