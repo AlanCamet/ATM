@@ -52,13 +52,28 @@ function printCard(i){
     div.appendChild(divText)
     cardsContainer.appendChild(div)
 }
- 
+
 const screen = document.querySelector(".contentScreen")
 const enter = document.querySelector("#enter")
-
+const inpuAcount = document.querySelector(".screenInputAcount")
+const inputNip = document.querySelector(".screenInputNip")
 
 function cleanScreen(){
     screen.innerHTML = ''
-    console.log("hola")
 }
-enter.addEventListener("click", cleanScreen)
+
+function login(event){
+    event.preventDefault()
+    let acount = inpuAcount.value
+    let nip = inputNip.value
+    for(let i=0; i<data.length; i++){
+        if (acount == data[i].acount & nip == data[i].nip){
+            console.log("holaperrillo")   
+            break;
+        }else{
+            console.log("poraqui pasó")
+        }    }
+    cleanScreen()
+}
+
+enter.addEventListener("click", login)
