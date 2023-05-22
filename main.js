@@ -7,12 +7,12 @@ async function getJSON(customer){
     let request = await fetch('customers.json')
     let response = await request.json()
     for(let i=0; i<response.length; i++){
-        createData(response[i])
+        createData(response[i] , i)
     }
 }
 getJSON()
 
-function createData(usuario){
+function createData(usuario, i){
     const newUser = {
         name: usuario.name,
         balance: usuario.balance,
@@ -20,16 +20,33 @@ function createData(usuario){
         nip: usuario.nip
         }
     data.push(newUser)
+    printCard(i)
     
 }
-console.log(data , "soy data")
 
-/* function printCard(arrayPosition){
+
+function printCard(i){
+    let img = document.createElement("img")
+    img.classList.add("profileImg")
+    img.src="assets/profile.png"
     let name = document.createElement("p")
-    console.log(data)
-} */
+    name.classList.add("name")
+    name.textContent = `Name: ${data[i].name}`
+    let nip = document.createElement("p")
+    nip.classList.add("nip")
+    nip.textContent = `Nip: ${data[i].nip}`
+    let acount = document.createElement("p")
+    acount.classList.add("acount")
+    acount.textContent = `Acount: ${data[i].acount}`
+    let div = document.createElement("div")
+    div.classList.add("card")
+    div.appendChild(name)
+    div.appendChild(acount)
+    div.appendChild(nip)
+    cardsContainer.appendChild(div)
+}
 
-const display = [
+/* const display = [
     {name: nameUno,
     acount: acountUno,
     nip: nipUno
@@ -44,7 +61,7 @@ const display = [
     acount: acountTres,
     nip: nipTres
     }
-]
+] */
 const boton = document.querySelector(".botonLogin")
 const buttonExit = document.querySelector(".buttonExit")
 const screenInputAcount = document.querySelector(".screenInputAcount")
