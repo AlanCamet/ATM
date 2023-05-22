@@ -113,18 +113,22 @@ function inicio(){
     
     screen.appendChild(containerScreen)
     
-    cancel.addEventListener("click", (event)=>{
-        event.preventDefault()
-        clean(screen)
-        inicio()
-    })
-    buttonTop.addEventListener("click",checkBalance)
-    buttonMiddle.addEventListener("click",enterScreen)
+    cancel.addEventListener("click",cancelEvent,true)
+    buttonTop.addEventListener("click",checkBalance,true)
+    buttonMiddle.addEventListener("click",enterScreen,true)
 
     exit.addEventListener("click", ()=>{
         console.log("hi")
         location.reload()
     } )
+}
+
+function cancelEvent(event){
+    event.preventDefault()
+    clean(screen)
+    inicio()
+    enter.removeEventListener("click",login, true)
+    enter.removeEventListener("click", addMoney, true)
 }
 
 function checkBalance(){
@@ -144,11 +148,12 @@ function checkBalance(){
     div.appendChild(aviso)
 
     screen.appendChild(div)
+    enter.removeEventListener("click", addMoney, true)
+    buttonMiddle.removeEventListener("click",enterScreen,true)
 }
 
 
 function enterScreen (){
-    console.log("hola")
     clean(screen)
     let h2 = document.createElement("h2")
     h2.textContent = "How much do you want to enter?"
@@ -165,8 +170,8 @@ function enterScreen (){
 
     screen.appendChild(div)
 
-    enter.addEventListener("click", addMoney)
-
+    enter.addEventListener("click", addMoney,true)
+    buttonTop.removeEventListener("click",checkBalance,true)
 }
 
 
@@ -178,5 +183,4 @@ function addMoney(event){
     data[usuario].balance = balanceActual + inputAdd
     checkBalance()
     setTimeout(enterScreen,3000)
-
 }
