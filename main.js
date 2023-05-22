@@ -127,8 +127,7 @@ function inicio(){
     } )
 }
 
-function checkBalance(event){
-    event.preventDefault()
+function checkBalance(){
     clean(screen)
     let h2 = document.createElement("h2")
     h2.textContent = "Your account balance is:"
@@ -148,8 +147,7 @@ function checkBalance(event){
 }
 
 
-function enterScreen (event){
-    event.preventDefault()
+function enterScreen (){
     console.log("hola")
     clean(screen)
     let h2 = document.createElement("h2")
@@ -176,11 +174,9 @@ function enterScreen (event){
 function addMoney(event){
     let inputAdd = parseInt(document.querySelector(".inputAdd").value)
     event.preventDefault()
-    console.log("ANTES", data[usuario].balance)
     let balanceActual = data[usuario].balance 
     data[usuario].balance = balanceActual + inputAdd
-    console.log(balanceActual)
-    console.log(inputAdd)
-    console.log("DESPUES", data[usuario].balance)
+    checkBalance()
+    setTimeout(enterScreen,3000)
 
 }
