@@ -119,7 +119,6 @@ function inicio(){
     buttonBottom.addEventListener("click", withdrawScreen, true)
 
     exit.addEventListener("click", ()=>{
-        console.log("hi")
         location.reload()
     } )
 }
