@@ -79,10 +79,11 @@ function login(event){
             inicio()
             break;
         }
-        }
+    }
+    enter.removeEventListener("click",login, true)
 }
 
-enter.addEventListener("click", login)
+enter.addEventListener("click", login, true)
 
 function inicio(){
     clean(cardsContainer)
@@ -118,6 +119,7 @@ function inicio(){
         inicio()
     })
     buttonTop.addEventListener("click",checkBalance)
+    buttonMiddle.addEventListener("click",enterScreen)
 
     exit.addEventListener("click", ()=>{
         console.log("hi")
@@ -143,10 +145,42 @@ function checkBalance(event){
     div.appendChild(aviso)
 
     screen.appendChild(div)
+}
 
-    cancel.addEventListener("click", (event)=>{
-        event.preventDefault()
-        clean(screen)
-        inicio()
-    })
+
+function enterScreen (event){
+    event.preventDefault()
+    console.log("hola")
+    clean(screen)
+    let h2 = document.createElement("h2")
+    h2.textContent = "How much do you want to enter?"
+    let input = document.createElement("input")
+    input.classList.add("inputAdd")
+    let aviso = document.createElement("p")
+    aviso.textContent = "Press CANCEL to return"
+    let div = document.createElement("div")
+    div.classList.add("enter")
+
+    div.appendChild(h2)
+    div.appendChild(input)
+    div.appendChild(aviso)
+
+    screen.appendChild(div)
+
+    enter.addEventListener("click", addMoney)
+
+}
+
+
+
+function addMoney(event){
+    let inputAdd = parseInt(document.querySelector(".inputAdd").value)
+    event.preventDefault()
+    console.log("ANTES", data[usuario].balance)
+    let balanceActual = data[usuario].balance 
+    data[usuario].balance = balanceActual + inputAdd
+    console.log(balanceActual)
+    console.log(inputAdd)
+    console.log("DESPUES", data[usuario].balance)
+
 }
