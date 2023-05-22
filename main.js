@@ -55,6 +55,10 @@ function printCard(i){
 
 const screen = document.querySelector(".contentScreen")
 const enter = document.querySelector("#enter")
+const cancel = document.querySelector("#cancel")
+const buttonTop = document.querySelector(".buttonTop")
+const buttonMiddle = document.querySelector(".buttonMiddle")
+const buttonBottom = document.querySelector(".buttonBottom")
 const inpuAcount = document.querySelector(".screenInputAcount")
 const inputNip = document.querySelector(".screenInputNip")
 let usuario;
@@ -86,6 +90,7 @@ function inicio(){
     let h2 = document.createElement("h2")
     h2.textContent = `Hi, ${data[usuario].name}`
     let question = document.createElement("p")
+    question.classList.add("question")
     question.textContent = "What operation do you want to perform?"
     let options = document.createElement("div")
     let optionOne = document.createElement("p")
@@ -98,8 +103,44 @@ function inicio(){
     options.appendChild(optionOne)
     options.appendChild(optionTwo)
     options.appendChild(optionThre)
+    let containerScreen = document.createElement("div")
+    containerScreen.classList.add("containerScreen")
+    containerScreen.appendChild(h2)
+    containerScreen.appendChild(question)
+    containerScreen.appendChild(options)
     
-    screen.appendChild(h2)
-    screen.appendChild(question)
-    screen.appendChild(options)
+    screen.appendChild(containerScreen)
+    
+    cancel.addEventListener("click", (event)=>{
+        event.preventDefault()
+        clean(screen)
+        inicio()
+    })
+    buttonTop.addEventListener("click",checkBalance)
+}
+
+function checkBalance(event){
+    event.preventDefault()
+    clean(screen)
+    let h2 = document.createElement("h2")
+    h2.textContent = "Your account balance is:"
+    let balance = document.createElement("p")
+    balance.classList.add("balance")
+    balance.textContent = `$${data[usuario].balance} USD`
+    let aviso = document.createElement("p")
+    aviso.textContent ="Press CANCEL to return"
+    let div = document.createElement("div")
+    div.classList.add("checkBalance")
+    
+    div.appendChild(h2)
+    div.appendChild(balance)
+    div.appendChild(aviso)
+
+    screen.appendChild(div)
+
+    cancel.addEventListener("click", (event)=>{
+        event.preventDefault()
+        clean(screen)
+        inicio()
+    })
 }

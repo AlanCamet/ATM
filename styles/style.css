@@ -320,3 +320,25 @@ button:active{
 .cancelMsg{
     margin-left: 100px;
 }
+
+.containerScreen{
+    display: grid;
+    grid-template-columns: 250px 100px;
+    grid-template-rows: 100px 100px;
+}
+
+.containerScreen h2, .containerScreen .question{
+    grid-column-start: 1;
+    text-align: center;
+
+}
+.containerScreen div{
+    grid-column-start: 2;
+    text-align: end;
+    grid-row-start: 1;
+    grid-row-end: 2;  
+    align-content: space-between;
+}
+.containerScreen div p{
+    margin: 40px;
+}
