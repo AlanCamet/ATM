@@ -1,24 +1,33 @@
 //Variables
-const nameUno = document.querySelector(".nameUno")
-const acountUno = document.querySelector(".acountUno")
-const nipUno = document.querySelector(".nipUno")
-const nameDos = document.querySelector(".nameDos")
-const acountDos = document.querySelector(".acountDos")
-const nipDos = document.querySelector(".nipDos")
-const nameTres = document.querySelector(".nameTres")
-const acountTres = document.querySelector(".acountTres")
-const nipTres = document.querySelector(".nipTres")
+const cardsContainer = document.querySelector("#cardsContainer")
 
 let data =[];
 
 async function getJSON(customer){
     let request = await fetch('customers.json')
     let response = await request.json()
-    data = response
-    console.log(data , "soy data")
+    for(let i=0; i<response.length; i++){
+        createData(response[i])
+    }
 }
-
 getJSON()
+
+function createData(usuario){
+    const newUser = {
+        name: usuario.name,
+        balance: usuario.balance,
+        acount: usuario.acount,
+        nip: usuario.nip
+        }
+    data.push(newUser)
+    
+}
+console.log(data , "soy data")
+
+/* function printCard(arrayPosition){
+    let name = document.createElement("p")
+    console.log(data)
+} */
 
 const display = [
     {name: nameUno,
