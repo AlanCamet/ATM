@@ -29,6 +29,11 @@ function printCard(i){
     let img = document.createElement("img")
     img.classList.add("profileImg")
     img.src="assets/profile.png"
+    let banckName = document.createElement("p")
+    banckName.classList.add("bankName")
+    banckName.textContent = "DEV.f Bank"
+    let divText = document.createElement("div") 
+    divText.classList.add("data")
     let name = document.createElement("p")
     name.classList.add("name")
     name.textContent = `Name: ${data[i].name}`
@@ -40,10 +45,32 @@ function printCard(i){
     acount.textContent = `Acount: ${data[i].acount}`
     let div = document.createElement("div")
     div.classList.add("card")
-    div.appendChild(name)
-    div.appendChild(acount)
-    div.appendChild(nip)
+    divText.appendChild(name)
+    divText.appendChild(acount)
+    divText.appendChild(nip)
+    div.appendChild(img)
+    div.appendChild(banckName)
+    div.appendChild(divText)
     cardsContainer.appendChild(div)
+
+    {/* <div class="card">
+            <img class="profileImg" src="assets/profile.png" alt="profile">
+            <p class="bankName">DEV.f Bank</p>
+            <div class="data">
+                <div class="textALign">
+                    <p class="nameCard">Name: </p>
+                    <p class="name nameDos"></p>
+                </div>
+                <div class="textALign">
+                    <p class="acountCard">Acount: </p>
+                    <p class="acount acountDos"></p>
+                </div>
+                <div class="textALign">
+                    <p class="nipCard">NIP: </p>
+                    <p class="nip nipDos"></p>
+                </div>
+            </div>
+        </div> */}
 }
 
 /* const display = [
