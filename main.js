@@ -56,6 +56,7 @@ function printCard(i){
 const screen = document.querySelector(".contentScreen")
 const enter = document.querySelector("#enter")
 const cancel = document.querySelector("#cancel")
+const exit = document.querySelector(".buttonExit")
 const buttonTop = document.querySelector(".buttonTop")
 const buttonMiddle = document.querySelector(".buttonMiddle")
 const buttonBottom = document.querySelector(".buttonBottom")
@@ -117,6 +118,11 @@ function inicio(){
         inicio()
     })
     buttonTop.addEventListener("click",checkBalance)
+
+    exit.addEventListener("click", ()=>{
+        console.log("hi")
+        location.reload()
+    } )
 }
 
 function checkBalance(event){
