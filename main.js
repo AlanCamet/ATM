@@ -57,9 +57,10 @@ const screen = document.querySelector(".contentScreen")
 const enter = document.querySelector("#enter")
 const inpuAcount = document.querySelector(".screenInputAcount")
 const inputNip = document.querySelector(".screenInputNip")
+let usuario;
 
-function cleanScreen(){
-    screen.innerHTML = ''
+function clean(doc){
+    doc.innerHTML = ''
 }
 
 function login(event){
@@ -68,12 +69,37 @@ function login(event){
     let nip = inputNip.value
     for(let i=0; i<data.length; i++){
         if (acount == data[i].acount & nip == data[i].nip){
-            console.log("holaperrillo")   
+            usuario = i
+            clean(screen)
+            inicio()
             break;
-        }else{
-            console.log("poraqui pasó")
-        }    }
-    cleanScreen()
+        }
+        }
 }
 
 enter.addEventListener("click", login)
+
+function inicio(){
+    clean(cardsContainer)
+    printCard(usuario)
+    
+    let h2 = document.createElement("h2")
+    h2.textContent = `Hi, ${data[usuario].name}`
+    let question = document.createElement("p")
+    question.textContent = "What operation do you want to perform?"
+    let options = document.createElement("div")
+    let optionOne = document.createElement("p")
+    optionOne.textContent = "Check Balance"
+    let optionTwo = document.createElement("p")
+    optionTwo.textContent = "Enter"
+    let optionThre = document.createElement("p")
+    optionThre.textContent = "Withdraw"
+    
+    options.appendChild(optionOne)
+    options.appendChild(optionTwo)
+    options.appendChild(optionThre)
+    
+    screen.appendChild(h2)
+    screen.appendChild(question)
+    screen.appendChild(options)
+}
