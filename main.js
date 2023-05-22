@@ -9,22 +9,17 @@ const nameTres = document.querySelector(".nameTres")
 const acountTres = document.querySelector(".acountTres")
 const nipTres = document.querySelector(".nipTres")
 
-const customers =[
-    {name: 'Alan camet',
-    balance: 250,
-    acount: 13572,
-    nip: 9704},
+let data =[];
 
-    {name:'Melody Vargas',
-    balance: 320,
-    acount: 23627,
-    nip: 2004},
-    
-    {name:'Adrian Camet',
-    balance: 292,
-    acount: 32638,
-    nip: 9319}
-]
+async function getJSON(customer){
+    let request = await fetch('customers.json')
+    let response = await request.json()
+    data = response
+    console.log(data , "soy data")
+}
+
+getJSON()
+
 const display = [
     {name: nameUno,
     acount: acountUno,
@@ -58,9 +53,9 @@ function textUno(string,display){
     display.acount.textContent = string.acount;
     display.nip.textContent = string.nip;
 } 
-textUno(customers[0], display[0])
+/* textUno(customers[0], display[0])
 textUno(customers[1], display[1])
-textUno(customers[2], display[2])
+textUno(customers[2], display[2]) */
 
 function login(){
     
