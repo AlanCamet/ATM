@@ -154,7 +154,6 @@ function checkBalance(){
     buttonBottom.removeEventListener("click", withdrawScreen, true)
 }
 
-
 function enterScreen (){
     clean(screen)
     let h2 = document.createElement("h2")
